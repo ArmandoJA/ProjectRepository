@@ -1,9 +1,5 @@
 import java.util.Objects;
 
-// Armando Alonso Franco
-// Panther ID: 6406621
-// COP 3337
-
 public class Employee {
     private String employeeID;
     private String name;
