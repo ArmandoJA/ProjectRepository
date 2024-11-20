@@ -1,9 +1,5 @@
 import java.util.Scanner;
 
-// Armando Alonso Franco
-// Panther ID: 6406621
-// COP 3337
-
 public class AirplaneSeats { //program that assigns passenger seats in an airplane
 
     public void makeSeats(String[][] arr) { //method that makes the airplane seats as a matrix
