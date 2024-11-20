@@ -1,7 +1,3 @@
-// Armando Alonso Franco
-// Panther ID: 6406621
-// COP 3337
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.StringTokenizer;
