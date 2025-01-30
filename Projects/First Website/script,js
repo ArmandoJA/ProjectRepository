@@ -1,0 +1,66 @@
+// Add JavaScript code for your web site here and call it from index.html.
+document.addEventListener('DOMContentLoaded', function () {
+    const modeToggleButton = document.getElementById('modeToggle');
+    const body = document.body;
+
+    body.classList.remove('darkmode');
+    modeToggleButton.textContent = '🌞';
+    
+
+    modeToggleButton.addEventListener('click', () => {
+        body.classList.toggle('darkmode');
+        if (body.classList.contains('darkmode')) {
+            modeToggleButton.textContent = '🌙';
+            localStorage.setItem('darkmode', 'true');
+        } else {
+            modeToggleButton.textContent = '🌞';
+            localStorage.setItem('darkmode', 'false');
+        }
+    });
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('petition-form');
+    const submitAnimation = document.getElementById('submit-animation');
+    const thankYouMessage = document.getElementById('message');
+
+    if (form) {
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            
+            submitAnimation.style.display = 'block';
+            thankYouMessage.textContent = `Thank you for signing the petition, ${name}!`;
+
+            setTimeout(function() {
+                submitAnimation.style.display = 'none';
+            }, 10000);
+        });
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll('.section');
+
+    function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return rect.top >= 0 && rect.bottom <= window.innerHeight;
+    }
+  
+    function handleScroll() {
+      sections.forEach(section => {
+        if (isInViewport(section)) {
+          section.classList.add('visible');
+        } else {
+          section.classList.remove('visible');
+        }
+      });
+    }
+  
+    window.addEventListener('scroll', handleScroll);
+  
+    handleScroll();
+  });
+
+
+
