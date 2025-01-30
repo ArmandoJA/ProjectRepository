@@ -1,0 +1,242 @@
+/* Add CSS styles for your web site here and use them in index.html. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+body {
+
+  /* Add a background color or image */
+  background-color: white;
+  background-size: cover;
+  /* Customize the font, size, and color for text*/
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+  color: black;
+  height: 100%;
+
+}
+
+
+body.darkmode {
+
+  /* Add a background color or image */
+  background-color: black;
+  background-size: cover;
+  /* Customize the font, size, and color for text*/
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+  color: white;
+  height: 100%;
+
+}
+
+
+#navbar {
+  background-color: grey;
+  padding: 5px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0px;
+  
+}
+
+#brain {
+  width: 100%;    /* Make the image span the full width */
+  height: auto;   /* Maintain aspect ratio */
+  margin: 0;      /* Remove any margin around the image */
+  padding: 0;     /* Remove any padding around the image */
+  display: flex;
+}
+
+#modeToggle {
+  padding: 0;
+  background-color: transparent;
+  color: white;
+  border-radius: 50px;
+  height: 30px;
+  width: 30px;
+  cursor: pointer; 
+  margin-top: -5px;
+  margin-right: 1100px;
+  line-height: 0px;
+  font-size: 20px;
+}
+
+#modeToggle:hover {
+  background-color: yellow;
+}
+
+
+.list {
+  display: flex;
+  list-style: none;
+}
+
+.list li {
+  margin: 0 25px;
+}
+
+/*
+  Style Text: Add style rules for any headings (h1-6),
+  paragraphs and links
+*/
+
+iframe {
+  display: block;
+  margin: auto;
+}
+
+h2 {
+  font-size: 33px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+h3 {
+  margin-top: 30px;
+  margin-bottom: 30px; 
+  line-height: 2;
+}
+
+.container {
+  display: flex;
+}
+
+.text-left {
+  padding-left: 160px;
+  width: 35%;
+  text-align: left;
+}
+
+.text-right {
+  padding-left: 100px;
+  width: 35%;
+  text-align: right;
+}
+
+.text-left-image {
+  padding-left: 120px;
+  width: 40%;
+  text-align: left;
+}
+
+.text-right-image {
+  padding-left: 350px;
+  width: 40%;
+  text-align: right;
+}
+
+.form-container {
+  padding-left: 0px;
+  flex-direction: column;
+  width: 38%;
+  margin-left: 100px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  border: 1px solid;
+  text-align: center;
+  border-color: black;
+  border-radius: 8px;
+}
+
+form input {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 200px;
+  text-align: center;
+}
+
+form button {
+  width: 80%;                   
+  padding: 10px;                
+  background-color: #4CAF50;    
+  color: white;                 
+  border: none;                 
+  border-radius: 4px;           
+  cursor: pointer;              
+}
+
+form button:hover {
+  background-color: #45a049;   
+}
+
+
+#content {
+  flex: 1;
+}
+
+
+#submit-animation {
+  position: fixed;  
+  top: 50%;  
+  left: 50%;
+  display: none;
+  transform: translate(-50%, -50%); 
+  width: 300px;  
+  height: 200px; 
+  background-color: lightblue; 
+  text-align: center;
+  padding: 20px;  
+  border-radius: 8px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+ul {
+  display: flex;
+  justify-content: flex-end;
+  background-image: url();
+}
+
+@keyframes rotate {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.circularimage {
+  margin-right: 200px;
+  margin-top: 80px;
+  border-radius: 50%; 
+  width: 350px; 
+  height: 350px; 
+  object-fit: cover; 
+  border: 5px solid rgb(10, 198, 35);
+}
+
+.circularimageanimation {
+    border-radius: 50%; 
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover; 
+    border: 5px solid rgb(34, 151, 224);
+    animation: rotate 5s linear infinite;
+}
+
+#end {
+  margin-top: auto;
+  text-align: center;
+  background-color: grey;
+  padding: 5px;
+}
+
+.section {
+  height: 100px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  transform: translateY(50px);
+  pointer-events: none;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
