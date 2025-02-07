@@ -1,4 +1,4 @@
-public class YearException extends Exception{
+public class YearException extends Exception{ //Sets exception for year
 
     public YearException() { //default constructor
         super();
