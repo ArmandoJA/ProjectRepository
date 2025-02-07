@@ -1,6 +1,8 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+// Program that calculates age using current day and birthday
+
 void verifyDate(int month, int day, int year);
 int daysPerMonth(int month, int year);
 
@@ -11,13 +13,13 @@ int main() {
         int a_month, a_day, a_year;
 
         printf("Enter Current Date (MM DD YYYY):\n");
-        scanf("%d %d %d", &c_month, &c_day, &c_year);
-        verifyDate(c_month, c_day, c_year);
+        scanf("%d %d %d", &c_month, &c_day, &c_year); 
+        verifyDate(c_month, c_day, c_year); //checks current date is valid
         printf("Enter Your Birth Date (MM DD YYYY):\n");
-        scanf("%d %d %d",&b_month, &b_day, &b_year);
-        verifyDate(b_month, b_day, b_year);
+        scanf("%d %d %d",&b_month, &b_day, &b_year); 
+        verifyDate(b_month, b_day, b_year); //checks b-day date is valid
 
-        if (c_day < b_day) {
+        if (c_day < b_day) { 
             if (daysPerMonth(c_month, c_year) == 31 || c_month == 9) {
                 a_day = 30 - (b_day - c_day);
             }
@@ -66,7 +68,7 @@ void verifyDate(int month, int day, int year) {
         }
 }
 
-int daysPerMonth(int month, int year) {
+int daysPerMonth(int month, int year) { //returns number of days depending on month
         switch(month) {
                 case 1: case 3: case 5: case 7: case 8: case 10: case 12:
                         return 31;
