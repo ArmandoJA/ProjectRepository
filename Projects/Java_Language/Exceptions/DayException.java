@@ -1,4 +1,4 @@
-public class DayException extends Exception{
+public class DayException extends Exception{ //Sets exception for day
 
     public DayException() { //default constructor
         super();
