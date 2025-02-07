@@ -1,4 +1,4 @@
-public class MonthException extends Exception{
+public class MonthException extends Exception{ //Sets exception for month
 
     public MonthException() { //default constructor
         super();
